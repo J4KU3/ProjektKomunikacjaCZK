@@ -6,7 +6,31 @@
         xmlns:local="clr-namespace:ProjektKomunikacja"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+    <Grid Background="#FF8F8C8C">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150*"/>
+            <ColumnDefinition Width="301*"/>
+            <ColumnDefinition Width="342*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Button  Content="Start" Margin="0,0,0,-0.333" Background="#FF8F8C8C"/>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Label  Content="WOS" Margin="0,0,5.333,237.667" RenderTransformOrigin="0.5,0.5" FontSize="150" FontFamily="Impact" Foreground="#FF23259B" HorizontalAlignment="Right" Width="292">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="-0.076"/>
+                        <RotateTransform Angle="-0.157"/>
+                        <TranslateTransform X="-0.119" Y="-0.048"/>
+                    </TransformGroup>
+
+                </Label.RenderTransform>
+            </Label>
+        </Grid>
+        <Grid Grid.Column="2">
+            <Label Content="Mebl" Margin="0,0,0,240.667" FontSize="150" FontFamily="Impact" HorizontalAlignment="Left" Width="342"/>
+        </Grid>
+
     </Grid>
 </Window>
