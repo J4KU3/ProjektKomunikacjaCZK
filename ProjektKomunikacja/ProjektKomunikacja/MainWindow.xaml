@@ -11,12 +11,12 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="150*"/>
             <ColumnDefinition Width="301*"/>
-            
+
         </Grid.ColumnDefinitions>
 
-        
-        
-        
+
+
+
         <Image Source="Zdjecie1.jpg" Margin="0,-322,0.333,-171.333" Grid.ColumnSpan="3"  />
 
         <Grid Grid.Column="0" Cursor="Hand">
@@ -27,13 +27,13 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Label Content="Login" Grid.Row="0" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="171" FontSize="60"/>
+            <Label Content="Login" Grid.Row="0" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="171" FontSize="50"/>
             <TextBox Grid.Row="0" HorizontalAlignment="Left" Height="96" Margin="10,105,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="487" Background="{x:Null}" FontSize="60" SelectionBrush="Black"/>
 
-            <Label Content="Hasło" Grid.Row="1" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="171" FontSize="60"/>
+            <Label Content="Hasło" Grid.Row="1" HorizontalAlignment="Left" Margin="10,10.333,0,0" Width="171" FontSize="50" Height="90" VerticalAlignment="Top"/>
             <TextBox Grid.Row="1" HorizontalAlignment="Left" Height="96" Margin="10,105,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="487" Background="{x:Null}" FontSize="60" SelectionBrush="Black"/>
 
         </Grid>
-        
+
     </Grid>
 </Window>
