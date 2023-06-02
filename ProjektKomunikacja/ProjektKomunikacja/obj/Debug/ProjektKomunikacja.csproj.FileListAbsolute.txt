@@ -13,3 +13,9 @@ C:\Users\kuba2\OneDrive\Pulpit\komunikacja człowiek komputer projekt\projekt\Pr
 C:\Users\kuba2\OneDrive\Pulpit\komunikacja człowiek komputer projekt\projekt\ProjektKomunikacjaCZK\ProjektKomunikacja\ProjektKomunikacja\obj\Debug\ProjektKomunikacja.csproj.CoreCompileInputs.cache
 C:\Users\kuba2\OneDrive\Pulpit\komunikacja człowiek komputer projekt\projekt\ProjektKomunikacjaCZK\ProjektKomunikacja\ProjektKomunikacja\obj\Debug\ProjektKomunikacja.exe
 C:\Users\kuba2\OneDrive\Pulpit\komunikacja człowiek komputer projekt\projekt\ProjektKomunikacjaCZK\ProjektKomunikacja\ProjektKomunikacja\obj\Debug\ProjektKomunikacja.pdb
+C:\Users\kuba2\OneDrive\Pulpit\komunikacja człowiek komputer projekt\projekt\ProjektKomunikacjaCZK\ProjektKomunikacja\ProjektKomunikacja\bin\Debug\EntityFramework.dll
+C:\Users\kuba2\OneDrive\Pulpit\komunikacja człowiek komputer projekt\projekt\ProjektKomunikacjaCZK\ProjektKomunikacja\ProjektKomunikacja\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\kuba2\OneDrive\Pulpit\komunikacja człowiek komputer projekt\projekt\ProjektKomunikacjaCZK\ProjektKomunikacja\ProjektKomunikacja\bin\Debug\EntityFramework.xml
+C:\Users\kuba2\OneDrive\Pulpit\komunikacja człowiek komputer projekt\projekt\ProjektKomunikacjaCZK\ProjektKomunikacja\ProjektKomunikacja\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\kuba2\OneDrive\Pulpit\komunikacja człowiek komputer projekt\projekt\ProjektKomunikacjaCZK\ProjektKomunikacja\ProjektKomunikacja\obj\Debug\ProjektKomunikacja_Content.g.cs
+C:\Users\kuba2\OneDrive\Pulpit\komunikacja człowiek komputer projekt\projekt\ProjektKomunikacjaCZK\ProjektKomunikacja\ProjektKomunikacja\obj\Debug\ProjektKomunikacja.csproj.CopyComplete

@@ -10,7 +10,7 @@
 
 
 
-        <TabControl Margin="0,-23,0.333,-0.333">
+        <TabControl x:Name="ProgramMain" Margin="0,-23,0.333,-0.333">
             <TabItem Header="LoginPage">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
@@ -25,7 +25,7 @@
                     <Image Source="Zdjecie1.jpg" Margin="0,-322,0.333,-171.333" Grid.ColumnSpan="3"  />
 
                     <Grid Grid.Column="0" Cursor="Hand">
-                        <Button  Content="Zaloguj" Margin="0,0,0,-0.333" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="45"/>
+                        <Button  Content="Zaloguj" Margin="0,0,0,-0.333" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="45" Click="LoginButton_Click"/>
                     </Grid>
                     <Grid Grid.Column="1">
                         <Grid.RowDefinitions>
@@ -33,10 +33,10 @@
                             <RowDefinition/>
                         </Grid.RowDefinitions>
                         <Label Content="Login" Grid.Row="0" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="171" FontSize="50"/>
-                        <TextBox Grid.Row="0" HorizontalAlignment="Left" Height="96" Margin="10,105,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="487" Background="{x:Null}" FontSize="60" SelectionBrush="Black"/>
+                        <TextBox Name="Login" Grid.Row="0" HorizontalAlignment="Left" Height="96" Margin="10,105,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="487" Background="{x:Null}" FontSize="60" SelectionBrush="Black"/>
 
                         <Label Content="Hasło" Grid.Row="1" HorizontalAlignment="Left" Margin="10,10.333,0,0" Width="171" FontSize="50" Height="90" VerticalAlignment="Top"/>
-                        <TextBox Grid.Row="1" HorizontalAlignment="Left" Height="96" Margin="10,105,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="487" Background="{x:Null}" FontSize="60" SelectionBrush="Black"/>
+                        <TextBox x:Name="Pasword" Grid.Row="1" HorizontalAlignment="Left" Height="96" Margin="10,105,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="487" Background="{x:Null}" FontSize="60" SelectionBrush="Black"/>
 
                     </Grid>
                 </Grid>

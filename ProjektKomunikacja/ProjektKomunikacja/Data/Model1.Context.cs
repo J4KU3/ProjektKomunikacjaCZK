@@ -27,8 +27,8 @@ namespace ProjektKomunikacja.Data
     
         public virtual DbSet<Clients> Clients { get; set; }
         public virtual DbSet<Complaints> Complaints { get; set; }
-        public virtual DbSet<Employees> Employees { get; set; }
         public virtual DbSet<Orders> Orders { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<Employees> Employees { get; set; }
     }
 }

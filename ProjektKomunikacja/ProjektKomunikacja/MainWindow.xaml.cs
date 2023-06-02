@@ -24,5 +24,45 @@ namespace ProjektKomunikacja
         {
             InitializeComponent();
         }
+        #region DataBaseConnection
+        private List<Data.Employees> GetLogin()
+        {
+            using (var employees = new Data.ZarzadzanieFirmaDBEntities())
+            {
+                return employees.Employees.ToList();
+            }
+        }
+
+
+        #endregion
+
+
+        private void LoginButton_Click(object sender, RoutedEventArgs e)
+        {
+            
+            try
+            {
+                var Log = GetLogin().Find(x => x.Mail == Login.Text);
+                string searchLogin = Log.Mail;
+                string searchPass = Log.Passsword;
+              //  MessageBox.Show($"{Log.Password}, {Log.Mail}");
+
+                if (Login.Text == searchLogin  && Pasword.Text == Log.Passsword)
+                {
+                    MessageBox.Show("NAreszcie");
+                    ProgramMain.SelectedIndex = 1;
+
+
+                }
+
+
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

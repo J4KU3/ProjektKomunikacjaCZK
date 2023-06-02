@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ZarzadzanieFirmaDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="ZarzadzanieFirmaDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Clients">
           <Key>
             <PropertyRef Name="ClientID" />
@@ -35,7 +35,7 @@
           <Property Name="ELastName" Type="varchar" MaxLength="50" />
           <Property Name="Phone" Type="varchar" MaxLength="50" />
           <Property Name="Mail" Type="varchar" MaxLength="50" />
-          <Property Name="Password" Type="nchar" MaxLength="10" />
+          <Property Name="Passsword" Type="varchar" MaxLength="50" />
           <Property Name="IsAdmin" Type="bit" />
         </EntityType>
         <EntityType Name="Orders">
@@ -116,8 +116,7 @@
             <End Role="Orders" EntitySet="Orders" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ZarzadzanieFirmaDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -144,19 +143,6 @@
           <Property Name="Reason" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Orders" Relationship="Self.FK_Complaints_Orders" FromRole="Complaints" ToRole="Orders" />
         </EntityType>
-        <EntityType Name="Employees">
-          <Key>
-            <PropertyRef Name="employeeID" />
-          </Key>
-          <Property Name="employeeID" Type="Int32" Nullable="false" />
-          <Property Name="EFirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="ELastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="Password" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
-          <Property Name="IsAdmin" Type="Boolean" />
-          <NavigationProperty Name="Orders" Relationship="Self.FK_Orders_Employees" FromRole="Employees" ToRole="Orders" />
-        </EntityType>
         <EntityType Name="Orders">
           <Key>
             <PropertyRef Name="OrderID" />
@@ -171,7 +157,7 @@
           <Property Name="Price" Type="Double" />
           <NavigationProperty Name="Clients" Relationship="Self.FK_Orders_Clients" FromRole="Orders" ToRole="Clients" />
           <NavigationProperty Name="Complaints" Relationship="Self.FK_Complaints_Orders" FromRole="Orders" ToRole="Complaints" />
-          <NavigationProperty Name="Employees" Relationship="Self.FK_Orders_Employees" FromRole="Orders" ToRole="Employees" />
+          <NavigationProperty Name="Employees" Relationship="ZarzadzanieFirmaDBModel.FK_Orders_Employees" FromRole="Orders" ToRole="Employees" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -207,22 +193,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Orders_Employees">
-          <End Role="Employees" Type="Self.Employees" Multiplicity="1" />
-          <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Employees">
-              <PropertyRef Name="employeeID" />
-            </Principal>
-            <Dependent Role="Orders">
-              <PropertyRef Name="employeeID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <EntityContainer Name="ZarzadzanieFirmaDBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Clients" EntityType="Self.Clients" />
           <EntitySet Name="Complaints" EntityType="Self.Complaints" />
-          <EntitySet Name="Employees" EntityType="Self.Employees" />
           <EntitySet Name="Orders" EntityType="Self.Orders" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <AssociationSet Name="FK_Orders_Clients" Association="Self.FK_Orders_Clients">
@@ -233,11 +206,37 @@
             <End Role="Orders" EntitySet="Orders" />
             <End Role="Complaints" EntitySet="Complaints" />
           </AssociationSet>
-          <AssociationSet Name="FK_Orders_Employees" Association="Self.FK_Orders_Employees">
+          <EntitySet Name="Employees" EntityType="ZarzadzanieFirmaDBModel.Employees" />
+          <AssociationSet Name="FK_Orders_Employees" Association="ZarzadzanieFirmaDBModel.FK_Orders_Employees">
             <End Role="Employees" EntitySet="Employees" />
             <End Role="Orders" EntitySet="Orders" />
           </AssociationSet>
         </EntityContainer>
+        <EntityType Name="Employees">
+          <Key>
+            <PropertyRef Name="employeeID" />
+          </Key>
+          <Property Name="employeeID" Type="Int32" Nullable="false" />
+          <Property Name="EFirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ELastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Passsword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IsAdmin" Type="Boolean" />
+          <NavigationProperty Name="Orders" Relationship="ZarzadzanieFirmaDBModel.FK_Orders_Employees" FromRole="Employees" ToRole="Orders" />
+        </EntityType>
+        <Association Name="FK_Orders_Employees">
+          <End Type="ZarzadzanieFirmaDBModel.Employees" Role="Employees" Multiplicity="1" />
+          <End Type="ZarzadzanieFirmaDBModel.Orders" Role="Orders" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Employees">
+              <PropertyRef Name="employeeID" />
+            </Principal>
+            <Dependent Role="Orders">
+              <PropertyRef Name="employeeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -267,19 +266,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Employees">
-            <EntityTypeMapping TypeName="ZarzadzanieFirmaDBModel.Employees">
-              <MappingFragment StoreEntitySet="Employees">
-                <ScalarProperty Name="employeeID" ColumnName="employeeID" />
-                <ScalarProperty Name="EFirstName" ColumnName="EFirstName" />
-                <ScalarProperty Name="ELastName" ColumnName="ELastName" />
-                <ScalarProperty Name="Phone" ColumnName="Phone" />
-                <ScalarProperty Name="Mail" ColumnName="Mail" />
-                <ScalarProperty Name="Password" ColumnName="Password" />
-                <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Orders">
             <EntityTypeMapping TypeName="ZarzadzanieFirmaDBModel.Orders">
               <MappingFragment StoreEntitySet="Orders">
@@ -302,6 +288,19 @@
                 <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
                 <ScalarProperty Name="version" ColumnName="version" />
                 <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Employees">
+            <EntityTypeMapping TypeName="ZarzadzanieFirmaDBModel.Employees">
+              <MappingFragment StoreEntitySet="Employees">
+                <ScalarProperty Name="IsAdmin" ColumnName="IsAdmin" />
+                <ScalarProperty Name="Passsword" ColumnName="Passsword" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="ELastName" ColumnName="ELastName" />
+                <ScalarProperty Name="EFirstName" ColumnName="EFirstName" />
+                <ScalarProperty Name="employeeID" ColumnName="employeeID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

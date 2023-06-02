@@ -25,7 +25,7 @@ namespace ProjektKomunikacja.Data
         public string ELastName { get; set; }
         public string Phone { get; set; }
         public string Mail { get; set; }
-        public string Password { get; set; }
+        public string Passsword { get; set; }
         public Nullable<bool> IsAdmin { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
