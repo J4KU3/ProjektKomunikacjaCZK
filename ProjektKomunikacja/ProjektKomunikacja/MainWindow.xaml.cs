@@ -43,25 +43,40 @@ namespace ProjektKomunikacja
             try
             {
                 var Log = GetLogin().Find(x => x.Mail == Login.Text);
-                string searchLogin = Log.Mail;
-                string searchPass = Log.Passsword;
-              //  MessageBox.Show($"{Log.Password}, {Log.Mail}");
-
-                if (Login.Text == searchLogin  && Pasword.Text == Log.Passsword)
+                string searchLogin="";
+                string searchPass="";
+                if (Log != null)
                 {
-                    MessageBox.Show("NAreszcie");
-                    ProgramMain.SelectedIndex = 1;
-
-
+                    searchLogin = Log.Mail;
+                    searchPass = Log.Passsword;
                 }
+                
+               
+                    
+                    if (Login.Text == searchLogin && Pasword.Text == searchPass && Login.Text != string.Empty && Pasword.Text != string.Empty)
+                    {
+                       
+                        MessageBox.Show("NAreszcie");
+                        ProgramMain.SelectedIndex = 1;
+
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("niepoprawne dane lub puste pole");
+                    }
+               
+                
+                //  MessageBox.Show($"{Log.Password}, {Log.Mail}");
+
 
 
 
             }
             catch (Exception)
             {
-
-                throw;
+                MessageBox.Show("złe dane");
+              //  throw;
             }
         }
     }
