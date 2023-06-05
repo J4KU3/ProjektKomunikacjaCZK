@@ -37,6 +37,7 @@ namespace ProjektKomunikacja
         #endregion
 
 
+        //Login
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
             
@@ -58,7 +59,8 @@ namespace ProjektKomunikacja
                        
                         MessageBox.Show("NAreszcie");
                         ProgramMain.SelectedIndex = 1;
-
+                       
+                         Pasword.Text = string.Empty;
 
                     }
                     else
@@ -78,6 +80,16 @@ namespace ProjektKomunikacja
                 MessageBox.Show("złe dane");
               //  throw;
             }
+        }
+        //LogOUt
+        private void LogOut_Click(object sender, RoutedEventArgs e)
+        {
+            ProgramMain.SelectedIndex = 0;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }
