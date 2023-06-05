@@ -19,3 +19,14 @@ C:\Users\kuba2\OneDrive\Pulpit\komunikacja człowiek komputer projekt\projekt\Pr
 C:\Users\kuba2\OneDrive\Pulpit\komunikacja człowiek komputer projekt\projekt\ProjektKomunikacjaCZK\ProjektKomunikacja\ProjektKomunikacja\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\kuba2\OneDrive\Pulpit\komunikacja człowiek komputer projekt\projekt\ProjektKomunikacjaCZK\ProjektKomunikacja\ProjektKomunikacja\obj\Debug\ProjektKomunikacja_Content.g.cs
 C:\Users\kuba2\OneDrive\Pulpit\komunikacja człowiek komputer projekt\projekt\ProjektKomunikacjaCZK\ProjektKomunikacja\ProjektKomunikacja\obj\Debug\ProjektKomunikacja.csproj.CopyComplete
+C:\Users\kuba2\OneDrive\Pulpit\komunikacja człowiek komputer projekt\projekt\ProjektKomunikacjaCZK\ProjektKomunikacja\ProjektKomunikacja\bin\Debug\CommonServiceLocator.dll
+C:\Users\kuba2\OneDrive\Pulpit\komunikacja człowiek komputer projekt\projekt\ProjektKomunikacjaCZK\ProjektKomunikacja\ProjektKomunikacja\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\kuba2\OneDrive\Pulpit\komunikacja człowiek komputer projekt\projekt\ProjektKomunikacjaCZK\ProjektKomunikacja\ProjektKomunikacja\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Users\kuba2\OneDrive\Pulpit\komunikacja człowiek komputer projekt\projekt\ProjektKomunikacjaCZK\ProjektKomunikacja\ProjektKomunikacja\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\kuba2\OneDrive\Pulpit\komunikacja człowiek komputer projekt\projekt\ProjektKomunikacjaCZK\ProjektKomunikacja\ProjektKomunikacja\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\kuba2\OneDrive\Pulpit\komunikacja człowiek komputer projekt\projekt\ProjektKomunikacjaCZK\ProjektKomunikacja\ProjektKomunikacja\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\kuba2\OneDrive\Pulpit\komunikacja człowiek komputer projekt\projekt\ProjektKomunikacjaCZK\ProjektKomunikacja\ProjektKomunikacja\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\kuba2\OneDrive\Pulpit\komunikacja człowiek komputer projekt\projekt\ProjektKomunikacjaCZK\ProjektKomunikacja\ProjektKomunikacja\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+C:\Users\kuba2\OneDrive\Pulpit\komunikacja człowiek komputer projekt\projekt\ProjektKomunikacjaCZK\ProjektKomunikacja\ProjektKomunikacja\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+C:\Users\kuba2\OneDrive\Pulpit\komunikacja człowiek komputer projekt\projekt\ProjektKomunikacjaCZK\ProjektKomunikacja\ProjektKomunikacja\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\kuba2\OneDrive\Pulpit\komunikacja człowiek komputer projekt\projekt\ProjektKomunikacjaCZK\ProjektKomunikacja\ProjektKomunikacja\bin\Debug\GalaSoft.MvvmLight.Platform.xml

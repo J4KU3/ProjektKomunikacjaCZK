@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GalaSoft.MvvmLight.Command;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,10 +21,13 @@ namespace ProjektKomunikacja
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
             DataLoaded.ItemsSource = GetLogin();
+            ChangeTabCommand = new RelayCommand<string>(ChangeTab);
+            DataContext = this;
         }
         #region DataBaseConnection
         private List<Data.Employees> GetLogin()
@@ -84,25 +88,24 @@ namespace ProjektKomunikacja
         }
 
         #region allMenu Buttons
-        //LogOUt
-        private void LogOut_Click(object sender, RoutedEventArgs e)
-        {
-            ProgramMain.SelectedIndex = 0;
-        }
+       
 
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
             Close();
         }
 
-        private void Przegladaj_Click(object sender, RoutedEventArgs e)
+        //Zmiana Strony 
+        public ICommand ChangeTabCommand { get; }
+        public void ChangeTab(string tabnum)
         {
-            ProgramMain.SelectedIndex = 2;
+            if (int.TryParse(tabnum, out int index))
+            {
+                ProgramMain.SelectedIndex = index;
+            }
         }
-        private void Zamow_Click(object sender, RoutedEventArgs e)
-        {
-            ProgramMain.SelectedIndex = 3;
-        }
+
+
         #endregion
 
 
