@@ -23,6 +23,7 @@ namespace ProjektKomunikacja
         public MainWindow()
         {
             InitializeComponent();
+            DataLoaded.ItemsSource = GetLogin();
         }
         #region DataBaseConnection
         private List<Data.Employees> GetLogin()
@@ -57,7 +58,7 @@ namespace ProjektKomunikacja
                     if (Login.Text == searchLogin && Pasword.Text == searchPass && Login.Text != string.Empty && Pasword.Text != string.Empty)
                     {
                        
-                        MessageBox.Show("NAreszcie");
+                        MessageBox.Show("Zalogowano");
                         ProgramMain.SelectedIndex = 1;
                        
                          Pasword.Text = string.Empty;
@@ -81,15 +82,29 @@ namespace ProjektKomunikacja
               //  throw;
             }
         }
+
+        #region allMenu Buttons
         //LogOUt
         private void LogOut_Click(object sender, RoutedEventArgs e)
         {
             ProgramMain.SelectedIndex = 0;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Exit_Click(object sender, RoutedEventArgs e)
         {
             Close();
         }
+
+        private void Przegladaj_Click(object sender, RoutedEventArgs e)
+        {
+            ProgramMain.SelectedIndex = 2;
+        }
+        private void Zamow_Click(object sender, RoutedEventArgs e)
+        {
+            ProgramMain.SelectedIndex = 3;
+        }
+        #endregion
+
+
     }
 }
