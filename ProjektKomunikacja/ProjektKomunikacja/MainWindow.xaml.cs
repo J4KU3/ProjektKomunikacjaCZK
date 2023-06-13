@@ -106,8 +106,12 @@ namespace ProjektKomunikacja
         }
 
 
+
         #endregion
 
+        private void ZappiszDaneClienta_Click(object sender, RoutedEventArgs e)
+        {
 
+        }
     }
 }
