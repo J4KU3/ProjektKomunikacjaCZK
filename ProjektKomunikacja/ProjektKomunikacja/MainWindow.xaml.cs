@@ -25,11 +25,12 @@ namespace ProjektKomunikacja
         public MainWindow()
         {
             InitializeComponent();
-            DataLoaded.ItemsSource = GetLogin();
+            DataLoaded.ItemsSource = GetClients();
             ChangeTabCommand = new RelayCommand<string>(ChangeTab);
             DataContext = this;
         }
         #region DataBaseConnection
+        //pracownicy
         private List<Data.Employees> GetLogin()
         {
             using (var employees = new Data.ZarzadzanieFirmaDBEntities())
@@ -37,10 +38,43 @@ namespace ProjektKomunikacja
                 return employees.Employees.ToList();
             }
         }
+        //klienci
+        private List<Data.Clients> GetClients()
+        {
+            using (var clients = new Data.ZarzadzanieFirmaDBEntities())
+            {
+                return clients.Clients.ToList();
+            }
+        }
+        //zamówienia
+        private List<Data.Orders> GetOrders()
+        {
+            using (var orders = new Data.ZarzadzanieFirmaDBEntities())
+            {
+                return orders.Orders.ToList();
+            }
+        }
+        //reklamacje
+        private List<Data.Complaints> GetComplaints()
+        {
+            using (var complaints = new Data.ZarzadzanieFirmaDBEntities())
+            {
+                return complaints.Complaints.ToList();
+            }
+        }
+        #endregion
+        #region CRUD
+        public void AddNewClients(Data.Clients newClients)
+        {
+            using (var Clients = new Data.ZarzadzanieFirmaDBEntities())
+            {
 
+                Clients.Clients.Add(newClients);
+                Clients.SaveChanges();
+            }
+        }
 
         #endregion
-
 
         //Login
         private void LoginButton_Click(object sender, RoutedEventArgs e)
@@ -111,7 +145,45 @@ namespace ProjektKomunikacja
 
         private void ZappiszDaneClienta_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                if (FN.Text != null && LN.Text != null && PH.Text != null && HAN != null && CID != null && ZC.Text != null && CT.Text != null && ST.Text!=null )
+                {
+                    Data.Clients clients = new Data.Clients();
+                    clients.CFName = FN.Text;
+                    clients.CLName = LN.Text;
+                    clients.Phone = PH.Text;
+                    clients.ApartmentNumber = HAN.Text;
+                    clients.ClientID = int.Parse(CID.Text);
+                    clients.Zipcode = ZC.Text;
+                    clients.City = CT.Text;
+                    clients.Street = ST.Text;
+                    AddNewClients(clients);
+                    MessageBox.Show("klient dodany do bazy");
+                    FN.Text = string.Empty;
+                    LN.Text = string.Empty;
+                    PH.Text = string.Empty;
+                    HAN.Text = string.Empty;
+                    CID.Text = string.Empty;
+                    ZC.Text = string.Empty;
+                    CT.Text = string.Empty;
+                    ST.Text = string.Empty;
 
+
+                }
+                else
+                {
+                    MessageBox.Show("ktores z pol jest puste");
+                }
+
+
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }
