@@ -21,13 +21,17 @@ namespace ProjektKomunikacja
     /// </summary>
     public partial class MainWindow : Window
     {
+        private DateTime date;
         
         public MainWindow()
         {
             InitializeComponent();
             DataLoaded.ItemsSource = GetClients();
             ChangeTabCommand = new RelayCommand<string>(ChangeTab);
+            date = DateTime.UtcNow;
+            OrderD.Text = $"{date.Day}/{date.Month}/{date.Year}";
             DataContext = this;
+
         }
         #region DataBaseConnection
         //pracownicy

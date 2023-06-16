@@ -104,7 +104,7 @@
                             <Label Grid.Column="0" Content="LastName" Margin="10,146,81.333,0" FontWeight="Bold" Height="26" VerticalAlignment="Top"/>
                             <Label Grid.Column="0" Content="Phone" Margin="10,222,81.333,0" FontWeight="Bold" Height="26" VerticalAlignment="Top"/>
                             <Label Content="Zipcode" Grid.Column="1" Margin="15.667,147,67,0" VerticalAlignment="Top" FontWeight="Bold"/>
-                            <Label Grid.Column="1" Content="City" Margin="15.667,220,67,149.333" FontWeight="Bold"/>
+                            <Label Grid.Column="1" Content="City" Margin="15.667,220,67,166.333" FontWeight="Bold"/>
                             <Label Grid.Column="1" Content="Street" Margin="15.667,299,67,0" FontWeight="Bold" Height="26" VerticalAlignment="Top"/>
                             <Label Grid.Column="0" Content="House/Apartment number" Margin="10,300,0.333,0" FontWeight="Bold" Height="26" VerticalAlignment="Top"/>
 
@@ -117,10 +117,33 @@
                             <TextBox x:Name="ZC" Grid.Column="1" Height="46" Margin="10.667,171,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
                             <TextBox x:Name="CT" Grid.Column="1" Margin="10.667,249,10,0" TextWrapping="Wrap" Text="" Height="46" VerticalAlignment="Top"/>
                             <TextBox x:Name="ST" Grid.Column="1" Margin="10.667,325,10,0" TextWrapping="Wrap" Text="" Height="45" VerticalAlignment="Top"/>
-                           
+
                             <Button Grid.Column="0" Content="zapisz dane klienta" Margin="10,376,10.333,0" Background="{x:Null}" FontWeight="Bold" Click=" ZappiszDaneClienta_Click" Height="29" VerticalAlignment="Top"/>
+
+                        </Grid>
+                        <Grid Grid.Column="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <Label Content="ClientID" Grid.Column="1" Margin="15.667,75,23,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                            <Label Grid.Column="0" Content="OrderID" Margin="10,73,62.333,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                            <Label Grid.Column="0" Content="EmployeID" Margin="10,146,81.333,0" FontWeight="Bold" Height="26" VerticalAlignment="Top"/>
+                            <Label Grid.Column="0" Content="ItemName" Margin="10,222,62.333,0" FontWeight="Bold" Height="26" VerticalAlignment="Top"/>
+                            <Label Content="Price" Grid.Column="1" Margin="15.667,147,67,0" VerticalAlignment="Top" FontWeight="Bold"/>
+                            <Label Grid.Column="1" Content="Item Color" Margin="15.667,220,67,0" FontWeight="Bold" Height="46" VerticalAlignment="Top"/>
+                            <Label Grid.Column="1" Content="Project" Margin="15.667,299,67,0" FontWeight="Bold" Height="26" VerticalAlignment="Top"/>
+                            <Label Grid.Column="0" Content="Order Date" Margin="10,300,7.333,0" FontWeight="Bold" Height="26" VerticalAlignment="Top"/>
+
+                            <TextBox x:Name="FN_Copy" Grid.Column="0" Height="47" Margin="10,99,7.333,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+                            <TextBox x:Name="FN_Copy1" Grid.Column="0" Height="47" Margin="7,172,9.333,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+                            <TextBox x:Name="FN_Copy2" Grid.Column="0" Height="47" Margin="7,253,8.333,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+                            <TextBox x:Name="OrderD" IsReadOnly="True" Grid.Column="0" Height="47" Margin="7,326,7.333,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" FontSize="30"/>
+
                         </Grid>
                     </Grid>
+
 
 
                 </Grid>
